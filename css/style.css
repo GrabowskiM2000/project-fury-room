@@ -1,0 +1,688 @@
+:root{
+	--red:#a20a22;
+	--white:#fff;
+	--gray:#9c9c9c;
+	--darkgrey:#40403f;
+	--graytext:#959595;
+	--lightgray:#b2b2b2;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	text-decoration:none;
+	list-style:none;
+	font-family: 'Rajdhani', sans-serif;
+}
+.center{
+	margin:0 auto;
+	max-width:1200px;
+	padding:0 20px;
+}
+.flexBlock{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+a,img, .transitionEl, li span, :before, :after{
+	-webkit-transition: all 200ms linear;
+	-moz-transition: all 200ms linear;
+	-ms-transition: all 200ms linear;
+	-o-transition: all 200ms linear;
+	transition: all 200ms linear;
+}
+
+/* ---------------------------------- HEADER ---------------------------------*/
+
+header .topline{
+	padding:20px 0;
+	width:100%;
+}
+header .topline .image{
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+	height:120px;
+	width:138px;
+}
+header .topline nav .menu a{
+	position:relative;
+}
+header .topline nav .menu a:after{
+	position:absolute;
+	content:"";
+	width:0;
+	height:2px;
+	background:black;
+	bottom:0;
+	left:0;
+}
+header .topline nav .menu a:hover:after{
+	width:100%;
+}
+header .topline nav .menu a:hover{
+	opacity:.7;
+}
+header .topline nav{
+	width:100%;
+	max-width:480px;
+}
+header .topline .menu{
+	flex:auto;
+	margin-right:80px;
+}
+header .topline .center nav .social li a{
+	width:40px;
+	height:40px;
+	display:block;
+	margin:0 10px;
+}
+header .topline .center nav .social img{
+	width:100%;
+	height:100%;
+}
+header .topline .center nav .social img:hover{
+	transform:scale(1.3);
+	opacity:.8;
+}
+header .topline .center nav .social img:active{
+	transform:scale(1.2);
+	opacity:1;
+	transition:50ms;
+}
+
+/*------------------------------------BANER-------------------------------------------------------------------------*/
+
+header .baner{
+	background:url(../images/angryman.png) no-repeat bottom right;
+	border-bottom:3px solid var(--red);
+	padding:126px 0px 0 62px;
+	position:relative;
+}
+header .baner h1{
+	font-weight:700;
+	font-size:90px;
+	text-transform:uppercase;
+	position:relative;
+	margin-left:-10px;
+}
+header .baner h1:before{
+	content:"";
+	height:100%;
+	width:5px;
+	background:var(--red);
+	position:absolute;
+	left:-52px;
+	border-radius:2px;
+	margin-left:20px;
+}
+header .baner h4{
+	font-weight:400;
+	font-size:36px;
+	color:var(--graytext);
+	margin-bottom:80px;
+	text-transform:uppercase;
+}
+header .baner p{
+	font-weight:400;
+	font-size:18px;
+	color:var(--graytext);
+	width:585px;
+	margin-bottom:55px;
+}
+header .baner .buttonbox{
+	max-width:460px;
+    padding-left: 5px;
+    margin:20px 0 20px 0;
+}
+header .baner .button{
+    padding: 15px 50px 15px 30px;
+	justify-content:center;
+	font-weight:500;
+	font-size:18px;
+	border-radius:20px;
+	background-color:var(--red);
+	color:white;
+	transition:300ms;
+	position:relative;
+	top:0;
+}
+header .baner .button:hover{
+    top: -5px;
+    box-shadow: 0 20px 20px 0 rgba(0,0,0,0.5);
+}
+header .baner .button:active{
+	transform:scale(1.1);
+	transition:50ms;
+}
+header .baner .buttonbox :nth-child(2){
+	background:white;
+	color:black;
+	border:2px solid var(--red);
+	margin-left:10px;
+	position:relative;
+}
+header .baner .buttonbox :nth-child(2):after{
+	content:"";
+	position:absolute;
+	width:23px;
+	height:26px;
+	background:url(../images/play.png);
+	right:0;
+	margin-right:10px;
+}
+
+/*-------------------------------------SECTION---BLACKLINE------------------------------------*/
+
+section .blackline{
+	padding:160px 0 40px 0;
+	background:black;
+	display:flex;
+	align-items:flex-end;
+	position:relative;
+}
+section .blackline .center{
+	width:100%;
+	align-items:flex-end;
+}
+section .blackline:before{
+	content:"";	
+	background:white;
+	width:100%;
+	height:284px;
+	position:absolute;
+	top:0;
+}
+section .blackline span{
+	background:url(../images/biglogo.png);
+	height:369px;
+	width:420px;
+	z-index:2;
+	margin-bottom:20px;
+}
+section .blackline .item{
+	margin-bottom:68px;
+	margin-left:20px;
+	white-space: nowrap;
+}
+section .blackline .item .box{
+	color:white;
+	justify-content:flex-start;
+	align-items:flex-end;
+}
+section .blackline .item .box p{
+	font-weight:700;
+	font-size:90px;
+	margin-left:42px;
+	position:relative;
+}
+section .blackline .item .box p:before{
+	content:"";
+	width:5px;
+	height:70px;
+	background:var(--red);
+	position:absolute;
+	left:-38px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+section .blackline .item > p{
+	color:var(--graytext);
+	font-weight:400;
+	font-size:18px;
+}
+
+/*----------------------------------SECTION--ABOUT-US-------------------------------- */
+section .bigbox{
+	background:url(../images/evenangierman.png) no-repeat bottom 52px center;
+}
+.upbox{
+	padding-top:66px;
+	padding:80px 0;	
+	text-align:center;
+}
+.textbox{
+	justify-content:center;
+	text-align:center;
+}
+.textbox h4{
+	font-weight:700;
+	font-size:36px;
+	text-transform:uppercase;
+	white-space: nowrap;
+}
+.textbox p{
+	font-weight:300;
+	font-size:36px;
+	color:var(--lightgray);
+	text-transform:uppercase;
+}
+.textbox .brake{
+	height:43px;
+	width:5px;
+	background:var(--red);
+	margin:0 31px;
+}
+.upbox > p{
+	font-size:18px;
+	font-weight:400;
+	max-width:400px;
+	margin:0 auto;
+}
+section .downbox{
+	padding:80px 0;
+}
+section .sidebox{
+	flex-direction:column;
+	width:400px;
+}
+section .sidebox .item{
+	margin-left:10px;
+}
+section .sidebox .item h5{
+	margin-bottom:15px;
+	margin-left:18px;
+	font-weight:bold;
+	font-size:24px;
+	color:#131313;
+	text-transform:uppercase;
+	position:relative;
+}
+section .sidebox .item h5:before{
+	content:"";
+	position:absolute;
+	width:5px;
+	height:30px;
+	background:var(--red);
+	left:-18px;
+}
+section .sidebox .item p{
+	margin-bottom:25px;
+	font-weight:regular;
+	font-size:16px;
+	color:var(--graytext);
+}
+/*------------------------------------OFFER----------------------*/
+section .offerbg{
+	background:#242424;
+}
+section .offerbg .center{
+	padding-top:66px;
+	padding:120px 0;
+}
+section .offerbg .center .offerup > p{
+	color:#5d5d5d;
+	font-size:18px;
+	text-align:center;
+	max-width:400px;
+	margin:0 auto;
+}
+section .offerbg .center .offerup .textbox p{
+	font-size:36px;
+	font-weight:400;
+	color:var(--lightgray);
+	text-transform:uppercase;
+}
+section .offerbg .center .offerup .textbox h4{
+	color:white;
+}
+section .offerbg .center .offerbot{
+	flex:auto;
+	flex-wrap:wrap;
+}
+section .offerbg .center .offerbot .offeritem{
+	width:360px;
+	margin-top:100px;
+	margin-left:40px;
+	border-bottom:1px solid #1e1e1e;
+	padding-bottom:18px;
+}
+section .offerbg .center .offerbot .offeritem p{
+	color:#b1b1b1;
+}
+section .offerbg .center .offerbot .offeritem p:before{
+	content:url(../images/ok.png);
+	margin-right:30px;
+}
+
+/*-----------------------------------------CAROUSEL----------------------*/
+
+/* Parent wrapper to carousel. Width can be changed as needed. */
+.carousel-wrapper {
+  overflow: hidden;
+  margin-top:50px;
+  justify-content:center;
+}
+
+/* Apply 'border-box' to 'box-sizing' so border and padding is included in the width and height. */
+.carousel-wrapper * {
+  box-sizing: border-box;
+  height:400px;
+  width:500px;
+}
+
+/* We'll be using the 'transform' property to move the carousel's items, so setting the 'transform-style' to 'preserve-3d' will make sure our nested elements are rendered properly in the 3D space. */
+.carousel {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* By default we're hiding items (except the initial one) until the JS initiates. Elements are absolutely positioned with a width of 100% (as we're styling for mobile first), letting the content's height dictate the height of the carousel. Our magic property here for all our animation needs is 'transition', taking the properties we wish to animate 'transform' and 'opacity', along with the length of time in seconds. */
+.carousel__photo {
+  opacity: 0;
+  position: absolute;
+  top:0;
+  width: 100%;
+  min-width:500px;
+  margin: 0;	
+  padding: 1rem 4rem;
+  z-index: 100;
+  transition: transform .5s, opacity .5s, z-index .5s;
+}
+
+/* Display the initial item and bring it to the front using 'z-index'. These styles also apply to the 'active' item. */
+.carousel__photo.initial,
+.carousel__photo.active {
+  opacity: 1;
+  position: relative;
+  z-index: 900;
+}
+
+/* Set 'z-index' to sit behind our '.active' item. */
+.carousel__photo.prev,
+.carousel__photo.next {
+  z-index: 800;
+}
+
+/* Translate previous item to the left */
+.carousel__photo.prev {
+  transform: translateX(-100%);
+}
+
+/* Translate next item to the right */
+.carousel__photo.next {
+  transform: translateX(100%);
+}
+
+/* Style navigation buttons to sit in the middle, either side of the carousel. */
+.carousel__button--prev,
+.carousel__button--next {
+  position: absolute;
+  top:50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  transform: translateY(-50%);
+  border-radius: 30%;
+  cursor: pointer; 
+  z-index: 1001; /* Sit on top of everything */
+  border:3px solid var(--red);
+  margin:0px -150px;
+  transition: all 200ms linear;
+}
+.carousel__button--prev:hover,
+.carousel__button--next:hover {
+	transform:scale(1.1);
+	opacity:.9;
+	box-shadow: 0 40px 40px -10px rgba(0,0,0,0.4);
+	top:178px;
+}
+
+.carousel__button--prev {
+	left:0;
+}
+
+.carousel__button--next {
+	right:0;
+}
+
+/* Use pseudo elements to insert arrows inside of navigation buttons */
+.carousel__button--prev::after,
+.carousel__button--next::after {
+  content: " ";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 54%;
+  border-right: 3px solid var(--red);
+  border-bottom: 3px solid var(--red);
+  transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.carousel__button--next::after {
+  left: 47%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/*--------------------------------------------------CONTACT---------------------------*/
+
+section .contactbox .offerup{
+	margin-top:110px;
+}
+section .contactbox .offerup > p{
+	color:#5d5d5d;
+	text-align:center;
+	max-width:400px;
+	margin:0 auto;
+}
+section .contactbox .offerup .textbox p{
+	font-size:36px;
+	text-transform:uppercase;
+}
+section .contactbox .center ul{
+	margin-top:80px;
+}
+section .contactbox .center ul li+li{
+	margin:30px 150px 0 0;
+}
+section .contactbox .center ul li a{
+	color:black;
+	font-size:18px;
+	font-weight:regular;
+}
+section .contactbox .center ul li img{
+	margin-right:30px;
+}
+section .contactbox .center .rightside{
+	flex-direction:column;
+	min-width:330px;
+	margin-left:30px;
+}
+section .contactbox .center .brake{
+	width:300px;
+	height:1px;
+	background:#dbdbdb;
+	margin-top:40px;
+}
+section .contactbox .center p{
+	margin-top:40px;
+	margin-right:120px;
+}
+footer div{
+	height:80px;
+	background:#131313;
+	margin-top:60px;
+}
+footer div p{
+	color:#868686;
+	text-align:center;
+	padding:30px 0 8px 0;
+}
+
+/*---------------------------------------RWD-------------------------------------*/
+
+@media only screen and (max-width: 1200px) {
+	header .baner{
+		background:none;
+	}
+}
+@media only screen and (max-width: 1150px) {
+	section .bigbox{
+		background:none;
+	}
+	section .bigbox .downbox .sidebox .item{
+		margin:0 15px;
+	}
+}
+@media only screen and (max-width: 1136px) {
+	section .offerbg .offerbot{
+		justify-content:center;
+	}
+}
+@media only screen and (max-width: 930px) {
+	section .blackline .center span{
+		display:none;
+	}
+	section .blackline .center{
+		justify-content:space-around;
+	}
+	section .blackline{
+		padding:40px 0 0 0;
+	}
+	section .blackline:before{
+		display:none;
+	}
+}
+
+@media only screen and (max-width: 820px) {
+	section .carousel-wrapper .carousel__button--next,.carousel__button--prev{
+	    margin:0px 0px;
+	}
+}
+@media only screen and (max-width: 776px) {
+	section .offerbg .center .offerbot{
+		justify-content:center;
+	}
+	section .offerbg .center .offerbot .offeritem{
+		border-bottom:none;
+	}
+}
+@media only screen and (max-width: 700px) {
+	.topline .image{
+		display:none;
+	}
+	header .baner p{
+		max-width:100%;
+	}
+	header .topline .flexBlock{
+		justify-content:space-around;
+	}
+}
+@media only screen and (max-width: 650px) {
+	section .bigbox .downbox{
+		flex-wrap:wrap;
+	}
+	section .bigbox .downbox{
+		justify-content:center;
+	}
+	section .contactbox .center {
+		flex-wrap:wrap;
+		justify-content:center;
+	}
+	section .contactbox .center .rightside{
+		min-width:0;
+		margin-left:0;
+		align-items:flex-start;
+	}
+	section .contactbox .center .rightside .brake{
+		width:200px;
+	}
+	section .contactbox .center .rightside img{
+		margin-right:10px;
+	}
+	section .contactbox .center .rightside li,p{
+		width:100%;
+	}
+	section .contactbox .offerup .textbox{
+		flex-wrap:wrap;
+	}
+	
+	
+}
+@media only screen and (max-width: 629px) {
+	section .offerbg .center .offerup .textbox{
+		flex-wrap:wrap;
+	}
+}
+@media only screen and (max-width: 615px) {
+	header .baner{
+		padding:20px;
+	}
+	header .baner h1 span{
+		display:none;
+	}
+}
+@media only screen and (max-width: 560px) {
+	section .carousel-wrapper{
+		height:550px;
+		padding:0;
+	}
+	section .carousel-wrapper .carousel__button--prev:hover,
+	.carousel__button--next:hover{
+		top:200px;
+	}
+	section .carousel-wrapper .carousel__button--prev{
+		transform: translateY(220px)translateX(180px);
+	}
+	section .carousel-wrapper .carousel__button--next{
+		transform: translateY(220px)translateX(-180px);
+	}
+	section .carousel-wrapper .carousel .initial{
+		 width:100%;
+		 min-width:0;
+	}
+}
+@media only screen and (max-width: 520px) {
+	section .bigbox .upbox .textbox{
+		flex-wrap:wrap;
+	}
+}
+
+@media only screen and (max-width: 488px) {
+	section .blackline .center{
+		flex-wrap:wrap;
+		justify-content:flex-start;
+	}
+	section .blackline .center .item{
+		margin-left:50px;
+	}
+	section .blackline{
+		padding:60px 0 40px 0;
+	}
+}
+@media only screen and (max-width: 450px) {
+	header .topline .menu{
+		flex:auto;
+		margin-right:28px;
+	}
+	header .topline ul li+li{
+		margin:0px -12px 0px 2px;
+	}
+	header .baner .button span{
+		margin-left:5px;
+	}
+	header .baner h1{
+		font-size:60px;
+	}
+	header .buttonbox{
+		flex-direction:column;
+	}
+	header .baner .buttonbox :nth-child(2){
+		margin:0;
+		margin-top:20px;
+	}
+}
+@media only screen and (max-width: 425px) {
+}
+@media only screen and (max-width: 380px) {
+}
+
+/*  zdjęcie w header - usunąłem margintop 11px
+	zmiana ikonek social
+	animacje - na 2przyciski co niebyło + wszędzie active 
+	poprawa kodu czcionki
+	baner h2:before zamiast spana
+	
+	*/
