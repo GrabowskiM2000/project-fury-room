@@ -5,6 +5,7 @@
 	--darkgrey:#40403f;
 	--graytext:#959595;
 	--lightgray:#b2b2b2;
+	--fontsize:16px;
 }
 *{
 	margin:0;
@@ -31,6 +32,40 @@ a,img, .transitionEl, li span, :before, :after{
 	-o-transition: all 200ms linear;
 	transition: all 200ms linear;
 }
+/* -------------------------------------A11Y---------------------------------*/
+.contrast-black{
+	background-color: black !important;
+}
+.contrast-yellow{
+	color: yellow !important;
+}
+.a11y-toolbar{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	z-index: 5;
+	width: 100%;
+	padding:5px 0;
+	background-color: var(--darkgrey);
+	color: white;
+}
+.a11y-toolbar *{
+	margin:0 8px ;
+}
+.a11y-toolbar button{
+	border:none;
+	height:100%;
+	outline:none;
+	cursor:pointer;
+	background-color: var(--darkgray);	
+	color: white;
+	font-size: 16px;
+}
+.a11y-toolbar p{
+	font-size: 16px;
+	cursor:default;
+}
 
 /* ---------------------------------- HEADER ---------------------------------*/
 
@@ -47,6 +82,7 @@ header .topline .image{
 }
 header .topline nav .menu a{
 	position:relative;
+	color: black;
 }
 header .topline nav .menu a:after{
 	position:absolute;
@@ -197,8 +233,9 @@ section .blackline span{
 	background:url(../images/biglogo.png);
 	height:369px;
 	width:420px;
-	z-index:2;
+	z-index:3;
 	margin-bottom:20px;
+	margin-left: -20px;
 }
 section .blackline .item{
 	margin-bottom:68px;
@@ -501,14 +538,13 @@ section .contactbox .center p{
 	margin-right:120px;
 }
 footer div{
-	height:80px;
+	padding: 10px 0;
 	background:#131313;
 	margin-top:60px;
 }
 footer div p{
 	color:#868686;
 	text-align:center;
-	padding:30px 0 8px 0;
 }
 
 /*---------------------------------------RWD-------------------------------------*/
